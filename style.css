@@ -13,7 +13,7 @@ body{
     font-family: 'Poppins', sans-serif;
     background-color: #041C32;
     color: white;
-    height: 300vh;
+    height: 600vh;
 }
 
 /* global class names */
@@ -73,12 +73,13 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background-color: #256D85;
+    /* background-color: #256D85; */
+    background-color: black;
     padding: 20px;
     z-index: 1;
     margin: -50px;
     /* transition: 200ms; */
-    opacity: 0;
+    opacity: 1;
 }
 
 .portfolio-name{
@@ -98,7 +99,7 @@ body{
 
 .right .img-container{
     /* border: dotted; */
-    opacity: 0;
+    opacity: 1;
     width: 400px;
     height: 500px;
     position: relative;
