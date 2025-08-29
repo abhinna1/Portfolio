@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Abhinna Manandhar — Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="socials-fixed">
+        <a
+          href="https://github.com/abhinna1"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub</a
+        >
+        <a
+          href="https://www.linkedin.com/in/abhinna-/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >LinkedIn</a
+        >
+      </div>
+      <div class="header-flex">
+        <div class="pp-container">
+          <img src="./pp.jpg" alt="Profile picture" />
+        </div>
+        <div class="header-text">
+          <h1>Abhinna Manandhar</h1>
+          <p class="subtitle">
+            Software Engineering • Systems Programming • Clean code enjoyer
+          </p>
+
+          <p class="about">
+            I am a Software Engineer and a Computer Science enthusiast with my
+            core interests in Back-End Development and Systems Programming. I am
+            passionate about System Design and Clean Code and am often envolved in
+            Research and Development.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main class="tabs" aria-label="Portfolio sections">
+      <!-- Tabs -->
+      <input type="radio" name="tab" id="tab-edu" class="tab-radio" checked />
+      <label
+        for="tab-edu"
+        id="label-edu"
+        class="tab-label"
+        role="tab"
+        aria-controls="panel-edu"
+        aria-selected="true"
+        tabindex="0"
+        >Education</label
+      >
+
+      <input type="radio" name="tab" id="tab-exp" class="tab-radio" />
+      <label
+        for="tab-exp"
+        id="label-exp"
+        class="tab-label"
+        role="tab"
+        aria-controls="panel-exp"
+        aria-selected="false"
+        tabindex="0"
+        >Experience</label
+      >
+
+      <input type="radio" name="tab" id="tab-proj" class="tab-radio" />
+      <label
+        for="tab-proj"
+        id="label-proj"
+        class="tab-label"
+        role="tab"
+        aria-controls="panel-proj"
+        aria-selected="false"
+        tabindex="0"
+        >Projects</label
+      >
+
+      <input type="radio" name="tab" id="tab-tech" class="tab-radio" />
+      <label
+        for="tab-tech"
+        id="label-tech"
+        class="tab-label"
+        role="tab"
+        aria-controls="panel-tech"
+        aria-selected="false"
+        tabindex="0"
+        >Tech</label
+      >
+      <!-- This is a link styled as a tab, not a real tab panel -->
+      <a
+        href="./CV.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="tab-label"
+        >View CV</a
+      >
+
+      <!-- Panels -->
+      <section
+        id="panel-edu"
+        class="tab-panel"
+        role="tabpanel"
+        aria-labelledby="label-edu"
+      >
+        <article class="card">
+          <header class="card-head">
+            <h3>University at Buffalo, State University of New York</h3>
+            <span class="when">Jan 2025 — May 2026 (expected)</span>
+          </header>
+          <p class="lead">M.S. in Computer Science & Engineering</p>
+          <div class="program-details">
+            <p class="inline-label">
+              <strong>Courses:</strong>
+              <span class="tags">
+                <span class="tag">CSE 547 · Intro to ML</span>
+                <span class="tag"
+                  >CSE 531 · Algorithm Analysis &amp; Design</span
+                >
+                <span class="tag">CSE 521 · Operating Systems</span>
+              </span>
+            </p>
+          </div>
+        </article>
+        <article class="card">
+          <header class="card-head">
+            <h3>Coventry University</h3>
+            <span class="when">Graduated Dec 2023</span>
+          </header>
+          <p class="lead">BSc. (Hons) in Computing</p>
+          <div class="program-details">
+            <p class="inline-label">
+              <strong>Grade:</strong>
+              <span>First Class Honours</span>
+            </p>
+            <p class="inline-label">
+              <strong>Thesis:</strong>
+              <span class="tags">
+                <span class="tag thesis-tag">
+                  <a
+                    href="https://api.schoolworkspro.com/uploads/assignments/st6001cem-individual-project-bfCp56828-softwarica-1688115398656/thesis_1691682670015.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Blockchain for Secure EHR Access
+                  </a>
+                </span>
+              </span>
+            </p>
+            <div class="program-details">
+              <p class="inline-label">
+                <strong>Courses:</strong>
+                <span class="tags">
+                  <span class="tag">Computer Architecture</span>
+                  <span class="tag">Mathemaitcs for Computer Science</span>
+                  <span class="tag">Web API Development</span>
+                  <span class="tag">Mobile Application Development</span>
+                  <span class="tag">Data Science for Developers</span>
+                </span>
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section
+        id="panel-exp"
+        class="tab-panel"
+        riaole="tabpanel"
+        ar-labelledby="label-exp"
+      >
+        <details class="card collapsible" open>
+          <summary class="card-head">
+            <h3>Research Assistant — Dept. of Earth Sciences, University at Buffalo</h3>
+            <span class="when">Apr 2025 — Present • Buffalo, NY</span>
+          </summary>
+
+          <div class="card-body">
+            <ul class="bullets">
+              <li>
+                Trained and tested an Object-Dectection model using YOLOv8 for
+                detecting Staff Gauge from crowd-sourced images.
+              </li>
+              <li>
+                Implemented water-line detection using OpenCV pre-processing
+                techniques by binarizing image and scanning bottom-to-top for
+                white-pixel threshold.
+              </li>
+              <li>
+                Developed the pipeline for extracting the numeric staff-gauge
+                measurement of detected water-line using Google Gemini 2.5 Flash
+                model and produced visualizations for model performance
+                evaluation using Matplotlib.
+              </li>
+              <li>
+                Integrated and deployed the AI pipeline on a Twilio web-hook
+                endpoint to process crowd-sourced images.
+              </li>
+              <li>
+                Implemented Redis-Queue for background image processing and
+                improved used response time by average 5 seconds.
+              </li>
+              <li>
+                Used Redis for implementing fallback mechanism for invalid
+                contributions with 24 hour update grace.
+              </li>
+              <div class="experience-image-container">
+                <img
+                  src="./images/experience/crowdhydrology_pipeline.png"
+                  alt="Waterline Detection Piepeline"
+                />
+            </ul>
+
+            </div>
+
+            <span class="tags">
+              <span class="tag">Django</span>
+              <span class="tag">Redis</span>
+              <span class="tag">Redis Queue</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Numpy</span>
+              <span class="tag">Matplotlib</span>
+              <span class="tag">YOLOv8</span>
+              <span class="tag">Gemini 2.5 Flash</span>
+              <span class="tag">OpenCV</span>
+            </span>
+          </div>
+        </details>
+
+        <details class="card collapsible" open>
+          <summary class="card-head">
+            <h3>Mid-Software Engineer — Codavatar Tech (KrispCall)</h3>
+            <span class="when">Aug 2024 — Jan 2025 • Kathmandu, Nepal</span>
+          </summary>
+
+          <div class="card-body">
+            <ul class="bullets">
+              <li>
+                Designed and developed a billing microservice that supports
+                5,000+ users and processes over $3M in annual recurring revenue
+                (ARR).
+              </li>
+              <li>
+                Conducted Proof of Concept (PoC) on subscription management
+                using Chargebee and Stripe and successfuly lead the integration.
+              </li>
+              <li>
+                Actively reviewed pull requests and mentored 10 junior engineers
+                to ensure code quality and best practices.
+              </li>
+            </ul>
+
+            <span class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">gRPC</span>
+              <span class="tag">Starlette (FastAPI)</span>
+              <span class="tag">Twilio</span>
+              <span class="tag">Chargebee</span>
+              <span class="tag">Stripe</span>
+              <span class="tag">GraphQL</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Git</span>
+              <span class="tag">Jira</span>
+            </span>
+          </div>
+        </details>
+
+        <details class="card collapsible" open>
+          <summary class="card-head">
+            <h3>Mid-Software Engineer — Codavatar Tech (KrispCall)</h3>
+            <span class="when">Aug 2024 — Jan 2025 • Kathmandu, Nepal</span>
+          </summary>
+
+          <div class="card-body">
+            <ul class="bullets">
+              <li>
+                Designed and developed a billing microservice that supports
+                5,000+ users and processes over $3M in annual recurring revenue
+                (ARR).
+              </li>
+              <li>
+                Conducted Proof of Concept (PoC) on subscription management
+                using Chargebee and Stripe and successfuly lead the integration.
+              </li>
+              <li>
+                Actively reviewed pull requests and mentored 10 junior engineers
+                to ensure code quality and best practices.
+              </li>
+            </ul>
+
+            <span class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">gRPC</span>
+              <span class="tag">Starlette (FastAPI)</span>
+              <span class="tag">Twilio</span>
+              <span class="tag">Chargebee</span>
+              <span class="tag">Stripe</span>
+              <span class="tag">GraphQL</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Git</span>
+              <span class="tag">Jira</span>
+            </span>
+          </div>
+        </details>
+      </section>
+
+      <section
+        id="panel-proj"
+        class="tab-panel"
+        role="tabpanel"
+        aria-labelledby="label-proj"
+      >
+        <article class="card">
+          <header class="card-head">
+            <h3>
+              <a href="https://github.com/huangsam/ultimate-python/pull/79" target="_blank">Ultimate Python — Contribution</a>
+              
+            </h3>
+            <span class="when">
+                Open-source
+            </span>
+          </header>
+          <div class="card-body">
+            <ul class="bullets">
+              <li class="lead">
+                Created educational content on the concept of Encapsulation in Object Oriented Programming (OOP) in Python,
+                contributing to project starred by over 5000 users on GitHub.
+              </li>
+              <li class="lead">
+                Collaborated with the project’s maintainer, a Staff Software Engineer at LinkedIn, through iterative PR
+                discussions – Gaining hands-on experience with CI workflows and professional core-reivew practices.
+              </li>
+            </ul>
+          </div>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Docs</span>
+            <span class="tag">Testing</span>
+          </div>
+        </article>
+        <article class="card">
+          <header class="card-head">
+            <h3>
+              <a href="https://github.com/huangsam/ultimate-python/pull/79" target="_blank">
+                Ride-Sharing App (Web + Mobile)
+              </a>
+            </h3>
+            <span class="when">Personal</span>
+          </header>
+          <div class="card-body">
+            <ul class="bullets">
+              <li class="lead">
+                Build a cross-platform ride sharing mobile application in Flutter (Android, IOS, and WearOS), along with a
+                response web UI using React and Tailwind and NodeJS.
+              </li>
+              <li class="lead">
+                Developed a REST API using Node JS for the project back-end with MongoDB database.
+              </li>
+              <li class="lead">
+                Integrated Google Services (Place Auto-complete, Directions, Distance, and Maps) to improve Location UX and
+                pricing accuracy.
+              </li>
+            </ul>
+          </div>
+          <div class="tags">
+            <span class="tag">Flutter</span>
+            <span class="tag">React</span>
+            <span class="tag">Node</span>
+            <span class="tag">MongoDB</span>
+          </div>
+        </article>
+      </section>
+
+      <section
+        id="panel-tech"
+        class="tab-panel"
+        role="tabpanel"
+        aria-labelledby="label-tech"
+      >
+        <div class="grid">
+          <div class="stack">
+            <h4>Programming Languages</h4>
+            <p>Python, C/C++, Java, JavaScript</p>
+          </div>
+          <div class="stack">
+            <h4>Frameworks</h4>
+            <p>Django, FastAPI, GraphQL, gRPC, MERN</p>
+          </div>
+          <div class="stack">
+            <h4>Data/ML</h4>
+            <p>Pandas, Matplotlib, scikit-learn, TensorFlow, YOLOv8</p>
+          </div>
+          <div class="stack">
+            <h4>Database & Tools</h4>
+            <p>PostgreSQL, MySQL, MongoDB, Git, Docker, Linux, CI/CD</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>Created By: Abhinna Manandhar (abhinnam@buffalo.edu)</small>
+    </footer>
+  </body>
+</html>

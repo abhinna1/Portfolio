@@ -1,0 +1,332 @@
+:root {
+  --bg: #0b0f14;
+  --panel: #101621;
+  --ink: #eaf2f8;
+  --muted: #9fb2c4;
+  --line: #223044;
+  --brand: #7c9cff;
+  --ring: rgba(124, 156, 255, 0.35);
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* html, */
+/* body {
+  height: 100%;
+} */
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 500 16px/1.55 ui-sans-serif, system-ui, -apple-system, Segoe UI, Inter,
+    Roboto, Arial;
+}
+
+.site-header {
+  max-width: 1000px;
+  margin: 28px auto 8px;
+  padding: 0 16px;
+}
+.site-header h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+}
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+}
+
+.tabs {
+  max-width: 1000px;
+  margin: 10px auto;
+  padding: 0 16px;
+}
+
+/* Radios are hidden; labels become the tabs */
+.tab-radio {
+  position: absolute;
+  left: -9999px;
+}
+
+.tab-label {
+  display: inline-block;
+  margin: 8px 8px 0 0;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: 999px;
+  cursor: pointer;
+  user-select: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease,
+    transform 0.05s ease;
+}
+.tab-label:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px var(--ring);
+}
+.tab-label:hover {
+  border-color: #2b3d55;
+}
+
+/* Panels */
+.tab-panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin-top: 12px;
+  display: none; /* all hidden by default; radio selectors will show */
+}
+
+/* When a radio is checked, show its panel and style the label as active */
+#tab-edu:checked ~ #label-edu,
+#tab-exp:checked ~ #label-exp,
+#tab-proj:checked ~ #label-proj,
+#tab-tech:checked ~ #label-tech,
+#tab-about:checked ~ #label-about {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 4px var(--ring);
+}
+
+#tab-edu:checked ~ #panel-edu,
+#tab-exp:checked ~ #panel-exp,
+#tab-proj:checked ~ #panel-proj,
+#tab-tech:checked ~ #panel-tech,
+#tab-about:checked ~ #panel-about {
+  display: block;
+}
+
+/* Cards */
+.card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px;
+  margin: 10px 0;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.card:hover {
+  border-color: #2a3b53;
+  background: #0e1420;
+}
+.card-head {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.card h3 {
+  margin: 0;
+  font-size: 18px;
+}
+.when {
+  color: var(--muted);
+  font-size: 14px;
+}
+.lead {
+  margin: 0.4rem 0 0.2rem;
+}
+.bullets {
+  margin: 0.2rem 0 0.2rem 1.1rem;
+}
+.tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+.tag {
+  font-size: 12px;
+  padding: 4px 8px;
+  border: 1px solid #2a3b53;
+  border-radius: 999px;
+  color: #cfe4ff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.stack {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+}
+.stack h4 {
+  margin: 0.2rem 0 0.4rem;
+}
+.about {
+  margin: 0;
+  padding-top: 1rem;
+}
+
+.site-footer {
+  max-width: 1000px;
+  margin: 16px auto 32px;
+  padding: 0 16px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.pp-container {
+  width: 14rem;
+  height: 14rem;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  border: 3px solid var(--line);
+}
+
+.pp-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  gap: 24px; /* spacing between image and text */
+  flex-wrap: wrap; /* stack vertically on small screens */
+}
+
+.header-text {
+  flex: 1;
+  min-width: 240px; /* prevent text squishing */
+}
+
+.header-text h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+/* Make <a> tags with .tab-label class look like other tabs */
+a.tab-label {
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.thesis-tag a {
+  display: block;
+  color: inherit; /* Inherit color from parent .tag for consistency */
+  text-decoration: none;
+}
+
+/* socials bar */
+.socials {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-bottom: 12px;
+  position: fixed;
+}
+
+/* fixed socials bar - centered */
+.socials-fixed {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* centers it horizontally */
+  display: flex;
+  gap: 16px;
+  background: var(--panel);
+  padding: 8px 20px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border: 1px solid var(--line);
+  z-index: 1000;
+}
+
+.socials-fixed a,
+.socials-fixed a:visited {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.socials-fixed a:hover {
+  background: var(--brand);
+  color: #fff;
+}
+
+.socials a,
+.socials a:visited {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+.socials a:hover {
+  background: var(--brand);
+  color: #fff;
+  border-color: var(--brand);
+}
+
+.experience-image-container {
+  width: 100%;
+}
+
+.experience-image-container img {
+  width: 92%;
+  /* border-radius: 12px; */
+  margin-top: 12px;
+}
+
+/* Collapsible cards (details/summary) */
+.collapsible {
+  overflow: hidden; /* keeps rounded corners clean when collapsing */
+  cursor: pointer;
+}
+
+.collapsible summary {
+  position: relative;
+  padding-left: 28px;       /* reserve space on the left */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Arrow positioned on the left */
+.collapsible summary::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid var(--muted); /* ▼ */
+  transition: transform .15s ease;
+  pointer-events: none;
+}
+
+/* Rotate to ▲ when open */
+.collapsible[open] summary::before {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+
+.card-head h3 a {
+    color: rgb(128, 96, 255); /* keep link color same as surrounding text */
+    /* text-decoration: none; */
+}
+/* Small screens */
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
