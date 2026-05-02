@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Abhinna Manandhar — Portfolio</title>
+    <title>Abhinna Manandhar</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -16,7 +16,7 @@
           >GitHub</a
         >
         <a
-          href="https://www.linkedin.com/in/abhinna-/"
+          href="https://www.linkedin.com/in/abhinnam/"
           target="_blank"
           rel="noopener noreferrer"
           >LinkedIn</a
@@ -33,10 +33,13 @@
             </p>
 
           <p class="about">
-            I am a Software Engineer and a Computer Science enthusiast with my
+            <!-- I am a Software Engineer and a Computer Science enthusiast with my
             core interests in Back-End Development and Systems Programming. I am
             passionate about System Design and Clean Code and am often involved in
-            Research and Development.
+            Research and Development. -->
+            Scale-driven Back-End Engineer with 3 years of experience in building
+            high-availability SaaS and AI-enabled systems. Previously scaled billing and core
+            features for B2B Voice SaaS, currently handling $3M+ ARR and 10k+ Monthly Active Users.
           </p>
         </div>
       </div>
@@ -110,18 +113,22 @@
         <article class="card">
           <header class="card-head">
             <h3>University at Buffalo, State University of New York</h3>
-            <span class="when">Jan 2025 — May 2026 (expected)</span>
+            <span class="when">Jan 2025 — May 2026</span>
           </header>
-          <p class="lead">M.S. in Computer Science & Engineering</p>
+          <p class="lead">M.S. in Computer Science &amp; Engineering</p>
           <div class="program-details">
+            <p class="inline-label">
+              <strong>GPA:</strong>
+              <span>3.7 / 4.0</span>
+            </p>
             <p class="inline-label">
               <strong>Courses:</strong>
               <span class="tags">
-                <span class="tag">CSE 547 · Intro to ML</span>
-                <span class="tag"
-                  >CSE 531 · Algorithm Analysis &amp; Design</span
-                >
+                <span class="tag">CSE 531 · Algorithm Analysis &amp; Design</span>
                 <span class="tag">CSE 521 · Operating Systems</span>
+                <span class="tag">CSE 534 · Modern Networking Concepts</span>
+                <span class="tag">CSE 562 · Database Systems</span>
+                <span class="tag">CSE 547 · Intro to ML</span>
               </span>
             </p>
           </div>
@@ -129,13 +136,13 @@
         <article class="card">
           <header class="card-head">
             <h3>Coventry University</h3>
-            <span class="when">Graduated Dec 2023</span>
+            <span class="when">Oct 2020 — Nov 2023</span>
           </header>
           <p class="lead">BSc. (Hons) in Computing</p>
           <div class="program-details">
             <p class="inline-label">
-              <strong>Grade:</strong>
-              <span>First Class Honours</span>
+              <strong>GPA:</strong>
+              <span>4.0 / 4.0 (First Class Honours)</span>
             </p>
             <p class="inline-label">
               <strong>Thesis:</strong>
@@ -156,7 +163,7 @@
                 <strong>Courses:</strong>
                 <span class="tags">
                   <span class="tag">Computer Architecture</span>
-                  <span class="tag">Mathemaitcs for Computer Science</span>
+                  <span class="tag">Mathematics for Computer Science</span>
                   <span class="tag">Web API Development</span>
                   <span class="tag">Mobile Application Development</span>
                   <span class="tag">Data Science for Developers</span>
@@ -170,8 +177,8 @@
       <section
         id="panel-exp"
         class="tab-panel"
-        riaole="tabpanel"
-        ar-labelledby="label-exp"
+        role="tabpanel"
+        aria-labelledby="label-exp"
       >
         <details class="card collapsible" open>
           <summary class="card-head">
@@ -182,39 +189,26 @@
           <div class="card-body">
             <ul class="bullets">
               <li>
-                Trained and tested an Object-Dectection model using YOLOv8 for
-                detecting Staff Gauge from crowd-sourced images.
+                Developed a YOLO and OpenCV based computer vision pipeline to detect
+                and label water-line in water-gauge images for the CrowdHydrology
+                project to enable image submissions for citizen science.
               </li>
               <li>
-                Implemented water-line detection using OpenCV pre-processing
-                techniques by binarizing image and scanning bottom-to-top for
-                white-pixel threshold.
+                Integrated a Gemini API workflow to extract water-level measurements
+                from labeled images, and optimized prompts and image preprocessing
+                to reduce root-mean-square error.
               </li>
               <li>
-                Developed the pipeline for extracting the numeric staff-gauge
-                measurement of detected water-line using Google Gemini 2.5 Flash
-                model and produced visualizations for model performance
-                evaluation using Matplotlib.
+                Reduced contribution webhook latency by designing an asynchronous
+                service layer with a Redis queue for ML pipeline execution, and
+                managed deployments to Linux server.
               </li>
-              <li>
-                Integrated and deployed the AI pipeline on a Twilio web-hook
-                endpoint to process crowd-sourced images.
-              </li>
-              <li>
-                Implemented Redis-Queue for background image processing and
-                improved used response time by average 5 seconds.
-              </li>
-              <li>
-                Used Redis for implementing fallback mechanism for invalid
-                contributions with 24 hour update grace.
-              </li>
-              <div class="experience-image-container">
-                <img
-                  src="./images/experience/crowdhydrology_pipeline.png"
-                  alt="Waterline Detection Piepeline"
-                />
             </ul>
-
+            <div class="experience-image-container">
+              <img
+                src="./images/experience/crowdhydrology_pipeline.png"
+                alt="Waterline Detection Pipeline"
+              />
             </div>
 
             <span class="tags">
@@ -225,7 +219,7 @@
               <span class="tag">Numpy</span>
               <span class="tag">Matplotlib</span>
               <span class="tag">YOLOv8</span>
-              <span class="tag">Gemini 2.5 Flash</span>
+              <span class="tag">Gemini API</span>
               <span class="tag">OpenCV</span>
             </span>
           </div>
@@ -233,78 +227,79 @@
 
         <details class="card collapsible" open>
           <summary class="card-head">
-            <h3>Mid-Software Engineer — Codavatar Tech (KrispCall)</h3>
-            <span class="when">Aug 2024 — Jan 2025 • Kathmandu, Nepal</span>
+            <h3>Mid-Level Software Engineer — KrispCall (Codavatar Tech)</h3>
+            <span class="when">Aug 2024 — Jan 2025 • Singapore, Remote</span>
           </summary>
 
           <div class="card-body">
             <ul class="bullets">
               <li>
-                Designed and developed a billing microservice that supports
-                5,000+ users and processes over $3M in annual recurring revenue
-                (ARR).
+                Implemented high-availability voice/telephony features
+                (Call-Barging, Call-Whispering, and SMS-forwarding) to support
+                50,000+ minutes in daily call traffic using Twilio webhooks.
               </li>
               <li>
-                Conducted Proof of Concept (PoC) on subscription management
-                using Chargebee and Stripe and successfuly lead the integration.
+                Led the development of a billing microservice to decouple the
+                payment workflows from the core monolith, serving 10,000+ users
+                and enabling $3M+ in ARR.
               </li>
               <li>
-                Actively reviewed pull requests and mentored 10 junior engineers
-                to ensure code quality and best practices.
+                Rearchitected the legacy billing system to minimize custom logic
+                and improve system scalability by adopting native Stripe primitives
+                (Payment Intents, Subscriptions, Metered Billing) and designing
+                normalized PostgreSQL schemas.
               </li>
             </ul>
 
             <span class="tags">
               <span class="tag">Python</span>
               <span class="tag">gRPC</span>
-              <span class="tag">Starlette (FastAPI)</span>
+              <span class="tag">FastAPI</span>
               <span class="tag">Twilio</span>
-              <span class="tag">Chargebee</span>
               <span class="tag">Stripe</span>
               <span class="tag">GraphQL</span>
               <span class="tag">PostgreSQL</span>
               <span class="tag">MongoDB</span>
               <span class="tag">Git</span>
-              <span class="tag">Jira</span>
             </span>
           </div>
         </details>
 
         <details class="card collapsible" open>
           <summary class="card-head">
-            <h3>Mid-Software Engineer — Codavatar Tech (KrispCall)</h3>
-            <span class="when">Aug 2024 — Jan 2025 • Kathmandu, Nepal</span>
+            <h3>Associate Software Engineer — KrispCall (Codavatar Tech)</h3>
+            <span class="when">Mar 2023 — Aug 2024 • Singapore, Remote</span>
           </summary>
 
           <div class="card-body">
             <ul class="bullets">
               <li>
-                Designed and developed a billing microservice that supports
-                5,000+ users and processes over $3M in annual recurring revenue
-                (ARR).
+                Developed and maintained GraphQL and gRPC APIs for client and
+                inter-service communication in Python with FastAPI by implementing
+                Repository and Unit-Of-Work design patterns for data access
+                abstraction and transaction management.
               </li>
               <li>
-                Conducted Proof of Concept (PoC) on subscription management
-                using Chargebee and Stripe and successfuly lead the integration.
+                Maintained PostgreSQL database migrations using Alembic and wrote
+                optimized queries to minimize database overhead using SQLAlchemy ORM.
               </li>
               <li>
-                Actively reviewed pull requests and mentored 10 junior engineers
-                to ensure code quality and best practices.
+                Maintained PyTest test suites to improve code quality and test
+                coverage by enforcing SonarQube quality gates in the GitHub Actions
+                CI/CD pipeline.
               </li>
             </ul>
 
             <span class="tags">
               <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
               <span class="tag">gRPC</span>
-              <span class="tag">Starlette (FastAPI)</span>
-              <span class="tag">Twilio</span>
-              <span class="tag">Chargebee</span>
-              <span class="tag">Stripe</span>
               <span class="tag">GraphQL</span>
               <span class="tag">PostgreSQL</span>
-              <span class="tag">MongoDB</span>
-              <span class="tag">Git</span>
-              <span class="tag">Jira</span>
+              <span class="tag">SQLAlchemy</span>
+              <span class="tag">Alembic</span>
+              <span class="tag">PyTest</span>
+              <span class="tag">GitHub Actions</span>
             </span>
           </div>
         </details>
@@ -319,8 +314,7 @@
         <article class="card">
           <header class="card-head">
             <h3>
-              <a href="https://github.com/huangsam/ultimate-python/pull/79" target="_blank">Ultimate Python — Contribution</a>
-              
+              <a href="https://devpost.com/software/wip-gqe1pn" target="_blank">UB Tycoon [MLH Best Use of Gemini API Prize Winner @ UB Hacking 2025]</a>
             </h3>
             <span class="when">
                 Open-source
@@ -329,21 +323,46 @@
           <div class="card-body">
             <ul class="bullets">
               <li class="lead">
-                Created educational content on the concept of Encapsulation in Object Oriented Programming (OOP) in Python,
-                contributing to project starred by over 5000 users on GitHub.
+                Built an AI-powered semester gamification application using the Gemini API to parse syllabus PDFs and power an academic-advisor chatbot, winning the Best Use of Gemini API prize among 135 participating teams.
               </li>
               <li class="lead">
-                Collaborated with the project’s maintainer, a Staff Software Engineer at LinkedIn, through iterative PR
-                discussions – Gaining hands-on experience with CI workflows and professional core-reivew practices.
+                Designed a MongoDB schema for storing game state, and implemented a NodeJS REST API integrated with a React client.
               </li>
             </ul>
           </div>
           <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">Docs</span>
-            <span class="tag">Testing</span>
+            <span class="tag">Major League Hacking</span>
+            <span class="tag">Google Gemini</span>
+            <span class="tag">Hackathon</span>
+            <span class="tag">NodeJS</span>
+            <span class="tag">React</span>
+            <span class="tag">MongoDB</span>
           </div>
         </article>
+
+        <article class="card">
+          <header class="card-head">
+            <h3><a href="https://github.com/abhinna1/PintOS/" target="_blank" rel="noopener noreferrer">x86 Kernel Scheduler &amp; User Programs (PintOS)</a></h3>
+            <span class="when">Personal</span>
+          </header>
+          <div class="card-body">
+            <ul class="bullets">
+              <li class="lead">
+                Implemented a priority scheduler along with priority donation to mitigate priority inversion in C for the x86 PintOS kernel.
+              </li>
+              <li class="lead">
+                Enabled user program execution by implementing stack-based argument passing and core system call handlers such as exec, wait, and file I/O.
+              </li>
+            </ul>
+          </div>
+          <div class="tags">
+            <span class="tag">C</span>
+            <span class="tag">x86</span>
+            <span class="tag">Operating Systems</span>
+            <span class="tag">Kernel</span>
+          </div>
+        </article>
+
         <article class="card">
           <header class="card-head">
             <h3>
@@ -356,15 +375,13 @@
           <div class="card-body">
             <ul class="bullets">
               <li class="lead">
-                Build a cross-platform ride sharing mobile application in Flutter (Android, IOS, and WearOS), along with a
-                response web UI using React and Tailwind and NodeJS.
+                Developed a full-stack ride-sharing application, implementing the back-end using NodeJS and Express to build a REST API, and MongoDB to store application data.
               </li>
               <li class="lead">
-                Developed a REST API using Node JS for the project back-end with MongoDB database.
+                Integrated Google Maps Platform Services (Places, Directions, Distance Matrix) to calculate pricing and implement navigation.
               </li>
               <li class="lead">
-                Integrated Google Services (Place Auto-complete, Directions, Distance, and Maps) to improve Location UX and
-                pricing accuracy.
+                Developed a multi-platform client using Flutter (Android, iOS, WearOS) and ReactJS for the web dashboard.
               </li>
             </ul>
           </div>
@@ -373,6 +390,36 @@
             <span class="tag">React</span>
             <span class="tag">Node</span>
             <span class="tag">MongoDB</span>
+            <span class="tag">Google Maps</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <header class="card-head">
+            <h3>
+              <a href="https://github.com/huangsam/ultimate-python/pull/79" target="_blank">Ultimate Python — Open-Source Contribution</a>
+              
+            </h3>
+            <span class="when">
+                Open-source
+            </span>
+          </header>
+          <div class="card-body">
+            <ul class="bullets">
+              <li class="lead">
+                Created educational content on the concept of Encapsulation in Object Oriented Programming (OOP) in Python,
+                contributing to a project starred by over 5,000 users on GitHub.
+              </li>
+              <li class="lead">
+                Collaborated with the project's maintainer, a Staff Software Engineer at LinkedIn, through iterative PR
+                discussions — gaining hands-on experience with CI workflows and professional code-review practices.
+              </li>
+            </ul>
+          </div>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Docs</span>
+            <span class="tag">Testing</span>
           </div>
         </article>
       </section>
@@ -386,19 +433,23 @@
         <div class="grid">
           <div class="stack">
             <h4>Programming Languages</h4>
-            <p>Python, C/C++, Java, JavaScript</p>
+            <p>Python, Java, Go, TypeScript, JavaScript, C, C++</p>
           </div>
           <div class="stack">
-            <h4>Frameworks</h4>
-            <p>Django, FastAPI, GraphQL, gRPC, MERN</p>
+            <h4>Frameworks &amp; Tools</h4>
+            <p>Django, FastAPI, GraphQL, gRPC, REST, PyTest, MERN</p>
           </div>
           <div class="stack">
-            <h4>Data/ML</h4>
-            <p>Pandas, Matplotlib, scikit-learn, TensorFlow, YOLOv8</p>
+            <h4>ML &amp; Data</h4>
+            <p>Pandas, Matplotlib, Scikit-Learn, TensorFlow, Keras, PyTorch, YOLOv8, LLM/GenAI</p>
           </div>
           <div class="stack">
-            <h4>Database & Tools</h4>
-            <p>PostgreSQL, MySQL, MongoDB, Git, Docker, Linux, CI/CD</p>
+            <h4>Databases</h4>
+            <p>PostgreSQL, MySQL, MongoDB, Redis</p>
+          </div>
+          <div class="stack">
+            <h4>Systems &amp; DevOps</h4>
+            <p>Linux/Unix, Docker, AWS S3, CI/CD, GitHub Actions, Grafana, Distributed Systems</p>
           </div>
         </div>
       </section>
